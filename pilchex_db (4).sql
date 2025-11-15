@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-11-2025 a las 06:10:56
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.0.28
+-- Tiempo de generación: 14-11-2025 a las 21:41:58
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,13 +33,6 @@ CREATE TABLE `carrito` (
   `producto_id` int(11) DEFAULT NULL,
   `cantidad` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `carrito`
---
-
-INSERT INTO `carrito` (`id`, `usuario_id`, `producto_id`, `cantidad`) VALUES
-(3, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -78,7 +71,8 @@ CREATE TABLE `carrito_items` (
 --
 
 INSERT INTO `carrito_items` (`id`, `carrito_id`, `producto_id`, `cantidad`) VALUES
-(17, 3, 5, 1);
+(18, 3, 8, 1),
+(19, 3, 10, 5);
 
 -- --------------------------------------------------------
 
@@ -130,7 +124,7 @@ CREATE TABLE `cupones` (
 --
 
 INSERT INTO `cupones` (`id`, `codigo`, `descuento`, `habilitado`, `metodo`) VALUES
-(1, '1', 90.00, 1, 'ambos');
+(1, '1', 90.00, 0, 'ambos');
 
 -- --------------------------------------------------------
 
@@ -168,10 +162,9 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `imagen`, `stock`, `color`, `talle`) VALUES
-(1, 'Gonzalo', 'yt', 1.00, '', 100, NULL, NULL),
-(2, '2', '3', 432.00, 'https://www.google.com/imgres?q=ropa&imgurl=https%3A%2F%2Fwww.infotextil.com.ar%2Fwp-content%2Fuploads%2F2024%2F03%2Fb-20.jpg&imgrefurl=https%3A%2F%2Fwww.infotextil.com.ar%2Findumentaria-argentina-tiene-la-ropa-de-mujer-mas-cara-del-mundo-por-que%2F&docid', 99, NULL, NULL),
-(5, '10000', '10000', 100000.00, 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITERUSEhIWFRUVGBsXFRYYGBcWFxgYFRUWGRoZGBcYICghGholHRUYITEhJiorLi4uFx8zODMuNygtLisBCgoKDg0OGxAQGy8lHyYvLTErLi8vLS0tLS0rKy4tLS0tLS0wLS8tLS0tLS0tLS0tLS0tLS0vLS0tLS0tLS0tLf/AABEIALcBEwMBIgACEQEDEQH/', 92, NULL, NULL),
-(6, '1', NULL, 123.00, '', 1, '2', '3');
+(8, 'remera', NULL, 10000.00, 'uploads/prod_6917903c1b3d56.51833738.png', 10, 'rojo', 'M'),
+(9, 'jogin', NULL, 5000.00, 'uploads/prod_691790b074d166.82548856.png', 10, 'negro', 'l'),
+(10, 'buzo', NULL, 20000.00, 'uploads/prod_691790cf1e1a79.99628011.png', 20, 'verde', 'M');
 
 -- --------------------------------------------------------
 
@@ -306,7 +299,7 @@ ALTER TABLE `carritos`
 -- AUTO_INCREMENT de la tabla `carrito_items`
 --
 ALTER TABLE `carrito_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
@@ -336,7 +329,7 @@ ALTER TABLE `detalle_venta`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
