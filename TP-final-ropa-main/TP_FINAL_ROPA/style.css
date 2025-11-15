@@ -1,0 +1,96 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+/* Marquesina */
+.marquesina {
+  background: #343a40;
+  color: #e9ecef;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 6px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 2px solid #212529;
+}
+
+.marquesina span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: moverTexto 25s linear infinite;
+}
+
+@keyframes moverTexto {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.producto-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  background: #212529;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+   /* Login / Navbar */
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+  margin-right: 8px;
+  border-radius: 6px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+
+
+.card {
+  border-radius: 10px;
+}
+
+.card form label {
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+/* --- Banner principal --- */
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 3px solid #212529;
+}
